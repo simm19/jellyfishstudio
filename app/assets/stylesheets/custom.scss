@@ -2,7 +2,7 @@
 /****************** GLOBAL *****************/
 /*******************************************/
 body{
-    padding-top:100px;
+    padding-top:120px;
 }
 
 @font-face{
@@ -65,6 +65,10 @@ p {
   font-family: "geosanslightregular", sans-serif;
   text-align: justify;
   hyphens: auto;
+}
+
+.jumbotron p{
+    color:#ffffff;
 }
 
 /*******************************************/
@@ -163,7 +167,166 @@ p {
 /***************** CONTENT *****************/
 /*******************************************/
 
+.head{
+  padding: 20px;
+  margin: 50px 0;
+  background-color: #fff;
+  -moz-box-shadow: 0px 0px 3px 0px #a2a2a2;
+  -webkit-box-shadow: 0px 0px 3px 0px #a2a2a2;
+  -o-box-shadow: 0px 0px 3px 0px #a2a2a2;
+  box-shadow: 0px 0px 3px 0px #a2a2a2;
+  filter:progid:DXImageTransform.Microsoft.Shadow(color=#a2a2a2, Direction=NaN, Strength=3);
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  font-size: 1.6em;
+}
 
+.droplet{
+  background-image: url('droplet.png');
+  background-repeat: no-repeat;
+  width: 35px;
+  height: 40px;
+  display: block;
+  float: left;
+  margin-top: -6px;
+  margin-right: 20px;
+}
+
+.rocket{
+  background-image: url('rocket.png');
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+  display: block;
+  float: left;
+  margin-top: -6px;
+  margin-right: 20px;
+}
+
+.adressBook{
+  background-image: url('address-book.png');
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+  display: block;
+  float: left;
+  margin-top: -6px;
+  margin-right: 20px;
+}
+
+.love{
+  background-image: url('heart.png');
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+  display: block;
+  float: left;
+  margin-top: -6px;
+  margin-right: 20px;
+}
+
+.stacks{
+  background-image: url('stack.png');
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+  display: block;
+  float: left;
+  margin-top: -6px;
+  margin-right: 20px;
+}
+
+.containerRoundBox{
+    .roundBox{
+      display: block;
+      width: 150px;
+      height: 150px;
+      margin: 0 auto;
+      border-radius: 50%;
+      background-color: #393939;
+      -moz-box-shadow: 0px 0px 3px 0px #a2a2a2;
+      -webkit-box-shadow: 0px 0px 3px 0px #a2a2a2;
+      -o-box-shadow: 0px 0px 3px 0px #a2a2a2;
+      box-shadow: 0px 0px 3px 0px #a2a2a2;
+      filter:progid:DXImageTransform.Microsoft.Shadow(color=#a2a2a2, Direction=NaN, Strength=3);
+    }
+    .serviceBox{
+      display: block;
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background-color: #FFFFFF;
+      margin-left: 15px;
+      margin-top: 14px;
+    }
+    h2{
+      font-size: 1.5em;
+      text-align: center;
+      color: #d4a940;
+      font-weight: 600px!important;
+    }
+    .iconWebdesign{
+      background-image: url('screen.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      height:80px;
+      width:80px;
+      margin-top:20px;
+      margin-left:20px;
+    }
+    .iconDev{
+      background-image: image-url('keyboard.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      height:80px;
+      width:80px;
+      margin-top:20px;
+      margin-left:20px;
+    }
+    .iconTablet{
+      background-image: image-url('tablet.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      height:80px;
+      width:80px;
+      margin-top:20px;
+      margin-left:20px;
+    }
+    .iconIntegration{
+      background-image: image-url('responsive.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      height:80px;
+      width:80px;
+      margin-top:20px;
+      margin-left:20px;
+    }
+    .txtServices{
+        text-align:center;
+        max-width:220px;
+        margin:0 auto;
+        p{
+          text-align:center;
+        }
+        .savoirPlus{
+          text-align: center;
+          font-weight: bold;
+          width: 150px;
+          padding: 5px;
+          color:#393939;
+          -webkit-transition: all 0.5s;
+          -moz-transition: all 0.5s;
+          transition: all 0.5s;
+          margin:0 auto;
+          &:hover{
+              background-color: #393939;
+              color: #d4a940;
+          }
+        }
+    }
+}
 
 /*******************************************/
 /****************** FOOTER *****************/

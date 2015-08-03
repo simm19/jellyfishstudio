@@ -4210,6 +4210,7 @@ a.badge:hover, a.badge:focus {
   .container .jumbotron, .container-fluid .jumbotron {
     border-radius: 6px; }
   .jumbotron .container {
+    color:#ffffff;
     max-width: 100%; }
   @media screen and (min-width: 768px) {
     .jumbotron {

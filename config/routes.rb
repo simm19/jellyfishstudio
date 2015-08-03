@@ -9,6 +9,12 @@ Rails.application.routes.draw do
 
   get 'dashboard' => 'dashboard#index'
   
+  get 'services' => 'static_pages#services'
+  
+  get 'projets' => 'project#index'
+  
+  get 'contact' => 'contact#index'
+  
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
