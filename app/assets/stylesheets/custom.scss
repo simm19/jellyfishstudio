@@ -1,3 +1,6 @@
+/*******************************************/
+/****************** GLOBAL *****************/
+/*******************************************/
 body{
     padding-top:100px;
 }
@@ -64,6 +67,18 @@ p {
   hyphens: auto;
 }
 
+/*******************************************/
+/****************** HEADER *****************/
+/*******************************************/
+
+.logo{
+    background-image: url('logoHeader.png');
+    background-repeat: no-repeat;
+    height:108px;
+    width:78px;
+    float:left;
+}
+
 .txtLogo1{
   font-family: "jellybellyregular", sans-serif;
   margin-left: 6px;
@@ -84,3 +99,83 @@ p {
   color: #d4a940;
   font-weight: 600;
 }
+
+#navbar{
+    margin-top:30px;
+}
+
+.collapsed{
+    margin-top:35px;
+}
+
+/* Effet Css3 menu : three circles */
+.cl-effect-13 ul li a {
+  text-decoration:none;
+  -webkit-transition: color 0.3s;
+  -moz-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.cl-effect-13 ul li a::before {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  color: transparent;
+  content: '•';
+  text-shadow: 0 0 transparent;
+  -webkit-transition: text-shadow 0.3s, color 0.3s;
+  -moz-transition: text-shadow 0.3s, color 0.3s;
+  transition: text-shadow 0.3s, color 0.3s;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  transform: translateX(-50%);
+  pointer-events: none;
+  font-size:1.5em;
+}
+
+.cl-effect-13 ul li a:hover::before,
+.cl-effect-13 ul li a:focus::before {
+  color: #d4a940;
+  text-shadow: 15px 0 #d4a940, -15px 0 #d4a940;
+}
+
+.cl-effect-13 ul li a:hover,
+.cl-effect-13 ul li a:focus, .active a {
+  color: #d4a940;
+  outline: none;
+}
+
+.active a::before{
+  font-size:1.5em;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  content: '•';
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  transform: translateX(-50%);
+  pointer-events: none;
+  color: #d4a940 !important;
+  text-shadow: 15px 0 #d4a940, -15px 0 #d4a940;
+}
+
+/*******************************************/
+/***************** CONTENT *****************/
+/*******************************************/
+
+
+
+/*******************************************/
+/****************** FOOTER *****************/
+/*******************************************/
+
+
+
+/*******************************************/
+/**************** RESPONSIVE ***************/
+/*******************************************/
+
+
+/*******************************************/
+/**************** ANIMATION ****************/
+/*******************************************/
