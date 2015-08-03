@@ -1,0 +1,86 @@
+body{
+    padding-top:100px;
+}
+
+@font-face{
+    font-family: 'ubuntu_monobold';
+    src: font-url('ubuntumono-b-webfont.eot');
+    src: font-url('ubuntumono-b-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('ubuntumono-b-webfont.woff2') format('woff2'),
+         font-url('ubuntumono-b-webfont.woff') format('woff'),
+         font-url('ubuntumono-b-webfont.ttf') format('truetype'),
+         font-url('ubuntumono-b-webfont.svg#ubuntu_monobold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'geosanslightregular';
+    src: font-url('geosanslight-webfont.eot');
+    src: font-url('geosanslight-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('geosanslight-webfont.woff2') format('woff2'),
+         font-url('geosanslight-webfont.woff') format('woff'),
+         font-url('geosanslight-webfont.ttf') format('truetype'),
+         font-url('geosanslight-webfont.svg#geosanslightregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'jellybellyregular';
+    src: font-url('jellybelly-webfont.eot');
+    src: font-url('jellybelly-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('jellybelly-webfont.woff2') format('woff2'),
+         font-url('jellybelly-webfont.woff') format('woff'),
+         font-url('jellybelly-webfont.ttf') format('truetype'),
+         font-url('jellybelly-webfont.svg#jellybellyregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+::selection{
+    background-color:#4EAEA0;
+    color:#F5F5F5;
+}
+
+/* Firefox */
+::-moz-selection {
+    background-color:#4EAEA0;
+    color:#F5F5F5;
+}
+
+h1 {
+  color: #d4a940;
+  font-size:2.5em;
+  font-weight:100;
+  font-family: "UbuntuB", sans-serif;
+}
+
+p {
+  font-size:1.4em;
+  color: #393939;
+  font-family: "geosanslightregular", sans-serif;
+  text-align: justify;
+  hyphens: auto;
+}
+
+.txtLogo1{
+  font-family: "jellybellyregular", sans-serif;
+  margin-left: 6px;
+  padding-top: 0px;
+  font-size: 3.5em;
+  color: #4EAEA0;
+  line-height: 95px;
+  text-shadow: 2px 2px #393939;
+}
+
+.txtLogo2{
+  /*line-height: 20px;*/
+  margin-top: -30px;
+  margin-left: 85px;
+  display: block;
+  font-family: "geosanslightregular", sans-serif;
+  font-size: 1.5em;
+  color: #d4a940;
+  font-weight: 600;
+}
