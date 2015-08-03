@@ -69,6 +69,7 @@ p {
 
 .jumbotron p{
     color:#ffffff;
+    margin-bottom:0;
 }
 
 /*******************************************/
@@ -332,6 +333,29 @@ p {
 /****************** FOOTER *****************/
 /*******************************************/
 
+.sea{
+  z-index: 1000;
+  background-image: image-url('sea.png');
+  background-repeat: repeat-x;
+  height: 50px;
+  margin-top:50px;
+}
+
+footer{
+  height: 220px;
+  background-color: #202020;
+  color: #f4f4f4;
+  width: 100%;
+  border-top: 5px solid #d4a940;
+  h3{
+      margin-top:5px;
+      color: #fefefe;
+      font-family: "UbuntuB", sans-serif;
+      font-size: 1.3em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+}
 
 
 /*******************************************/
