@@ -72,6 +72,22 @@ p {
     margin-bottom:0;
 }
 
+.btn-big{
+    width:100%;
+    margin-top:20px;
+}
+
+.btn-green{
+    background-color: #4EAEA0;
+    color:#ffffff;
+    text-transform:uppercase;
+    font-weight:700;
+    &:hover{
+        background-color: #4EAEA0;
+        color:#D4A940;
+    }
+}
+
 /*******************************************/
 /****************** HEADER *****************/
 /*******************************************/
@@ -325,6 +341,33 @@ p {
               background-color: #393939;
               color: #d4a940;
           }
+        }
+    }
+}
+
+.loginContainer{
+    text-align:center;
+    width:600px;
+    margin:80px auto;
+    background-color: #fff;
+    padding:20px;
+    border-radius:8px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    h2{
+        margin:0 auto 40px auto;
+    }
+    form{
+        .field{
+            input{
+                border:none;
+                border-radius:4px;
+                background-color: #F4F4F4;
+                height:35px;
+                width:300px;
+                margin-bottom:20px;
+                padding-left:10px;
+                border: 1px solid rgba(0, 0, 0, 0.1);
+            }
         }
     }
 }
