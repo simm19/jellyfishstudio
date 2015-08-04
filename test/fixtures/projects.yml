@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  technos: MyString
+  screenshot_small_1: MyString
+  screenshot_small_2: MyString
+  screenshot_small_3: MyString
+  screenshot_big: MyString
+
+two:
+  name: MyString
+  description: MyText
+  technos: MyString
+  screenshot_small_1: MyString
+  screenshot_small_2: MyString
+  screenshot_small_3: MyString
+  screenshot_big: MyString

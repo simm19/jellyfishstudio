@@ -1,0 +1,14 @@
+<div class="container">
+    <h1>Créer un nouveau projet</h1>
+    <%= form_for [:dashboard, @project] do |f| %>
+        <%= f.text_field :name, required: true,  placeholder: "Nom du projet" %>
+        <%= f.text_field :technos, required: true,  placeholder: "Technologies du projet" %>
+        <%= f.number_field :project_duration %>
+        <%= f.text_area :description, required: true,  placeholder: "Description du projet" %>
+        <%= f.file_field :screenshot_small_1 %>
+        <%= f.file_field :screenshot_small_2 %>
+        <%= f.file_field :screenshot_small_3 %>
+        <%= f.file_field :screenshot_big %>
+        <%= f.submit %>
+    <% end %>
+</div>

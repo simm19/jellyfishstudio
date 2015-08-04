@@ -7,7 +7,10 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'home#index'
 
-  get 'dashboard' => 'dashboard#index'
+  namespace :dashboard do
+    root to: 'dashboard#index'
+    resources :project, only: [:new, :edit, :create, :destroy]
+  end
   
   get 'services' => 'static_pages#services'
   
