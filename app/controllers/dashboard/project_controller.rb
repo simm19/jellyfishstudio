@@ -1,4 +1,5 @@
 class Dashboard::ProjectController < Dashboard::DashboardController
+  
   def index
     @projects = Project.all
   end
@@ -11,8 +12,7 @@ class Dashboard::ProjectController < Dashboard::DashboardController
   end
   
   def create
-      @project = Project.new(params[:project])
-
+      @project = Project.new(project_params)
       if @project.save
           redirect_to dashboard_root_path,  notice: "Your project was saved successfully"
       else
@@ -27,7 +27,7 @@ class Dashboard::ProjectController < Dashboard::DashboardController
 
   protected
   def project_params
-    params.require(:project).permit(:name, :project_duration, :description, :technos, :screenshot_small_1, :screenshot_small_2, :screenshot_small_3, :screenshot_big)
+    params.require(:project).permit(:name, :project_duration, :description, :technos, :screenshots)
   end
   
 end

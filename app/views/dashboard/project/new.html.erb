@@ -1,14 +1,15 @@
 <div class="container">
     <h1>Créer un nouveau projet</h1>
-    <%= form_for @project, url: dashboard_project_index_path, html: { method: :post } do |f| %>
+    <%= form_for @project, url: dashboard_project_index_path, html: { method: :post, multipart: true } do |f| %>
         <%= f.text_field :name, required: true,  placeholder: "Nom du projet" %>
         <%= f.text_field :technos, required: true,  placeholder: "Technologies du projet" %>
         <%= f.number_field :project_duration %>
         <%= f.text_area :description, required: true,  placeholder: "Description du projet" %>
-        <%= f.file_field :screenshot_small_1 %>
-        <%= f.file_field :screenshot_small_2 %>
-        <%= f.file_field :screenshot_small_3 %>
-        <%= f.file_field :screenshot_big %>
+        <%= f.fields_for :screenshots do |p| %>
+            <div class="field">
+              <%= f.file_field :screenshots %>
+            </div>
+        <% end %>
         <%= f.submit %>
     <% end %>
 </div>
