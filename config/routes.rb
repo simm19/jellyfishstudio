@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   namespace :dashboard do
     root to: 'dashboard#index'
-    resources :project, only: [:new, :edit, :create, :destroy]
+    resources :project, only: [:index, :new, :edit, :create, :destroy]
   end
   
   get 'services' => 'static_pages#services'

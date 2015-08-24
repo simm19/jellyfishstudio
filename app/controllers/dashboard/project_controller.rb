@@ -5,6 +5,7 @@ class Dashboard::ProjectController < Dashboard::DashboardController
   end
   
   def show
+    @project = Project.find(params[:id])
   end
   
   def new
@@ -14,15 +15,24 @@ class Dashboard::ProjectController < Dashboard::DashboardController
   def create
       @project = Project.new(project_params)
       if @project.save
-          redirect_to dashboard_root_path,  notice: "Your project was saved successfully"
+          redirect_to dashboard_root_path,  notice: "Your project was created successfully"
       else
           render "new"
       end
   end
   
+  def edit
+    @project = Project.find(params[:id])
+    if @project.update_attributes(project_params)
+      redirect_to dashboard_root_path,  notice: "Your project was modified successfully"
+    else
+      render 'edit'
+    end
+  end
+  
   def destroy
     Project.find(params[:id]).destroy
-    redirect_to admin_general_messages_path, notice: 'General message deleted !'
+    redirect_to dashboard_root_path,  notice: "Your project was deleted successfully"
   end
 
   protected
