@@ -27,7 +27,10 @@
                         <hr></hr>
                         <%= image_tag t.screenshots.resized if t.screenshots.resized.present? %>
                         <div class="project-links-container">
-                             <%= link_to edit_dashboard_project_path(t.id) do %>
+                            <%= link_to dashboard_project_path(t.id), remote: true do %>
+                              <span class="glyphicon glyphicon-search"></span>
+                            <% end %>
+                            <%= link_to edit_dashboard_project_path(t.id) do %>
                               <span class="glyphicon glyphicon-pencil"></span>
                             <% end %>
                             <%= link_to dashboard_project_path(t.id), method: :delete, data: {confirm: "Are you sure ?"} do %>
@@ -41,21 +44,20 @@
         </div>
     </div>
     <hr></hr>
-    <div class="row">
+
+    <div class="row project-display">
         <div class="col-lg-8 col-md-8 cold-xs-8">
-            <img class="img-responsive" src="http://placehold.it/750x500" alt="">
+            
         </div>
-        <div class="col-lg-4 col-md-4 cold-xs-4">
-            <h3>Project Description</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.</p>
-            <h3>Project Details</h3>
+        <div class="col-lg-4 col-md-4 cold-xs-4 project-details">
+            <h3></h3>
+            <p></p>
+            <h4>Technologies</h4>
             <ul>
-                <li>Lorem Ipsum</li>
-                <li>Dolor Sit Amet</li>
-                <li>Consectetur</li>
-                <li>Adipiscing Elit</li>
+                
             </ul>
         </div>
     </div>
+
     
 </div>

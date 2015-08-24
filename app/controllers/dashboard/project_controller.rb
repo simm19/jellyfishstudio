@@ -15,10 +15,19 @@ class Dashboard::ProjectController < Dashboard::DashboardController
   def create
       @project = Project.new(project_params)
       if @project.save
-          redirect_to dashboard_root_path,  notice: "Your project was created successfully"
+        redirect_to dashboard_root_path,  notice: "Your project was created successfully"
       else
-          render "new"
+        render "new"
       end
+  end
+  
+  def show
+    @project = Project.find(params[:id])
+    @project_technos = format_technos(@project)
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
   
   def edit
@@ -38,6 +47,13 @@ class Dashboard::ProjectController < Dashboard::DashboardController
   protected
   def project_params
     params.require(:project).permit(:name, :project_duration, :description, :technos, :screenshots)
+  end
+  
+  def format_technos(project)
+    arr = []
+    project.technos.split(' ').each do|c|
+      arr << c
+    end
   end
   
 end
