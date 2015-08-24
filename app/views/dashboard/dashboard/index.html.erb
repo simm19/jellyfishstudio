@@ -3,14 +3,14 @@
         <div class="col-lg-4 col-md-4 cold-xs-4">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title"><i class="fa fa-clock-o fa-fw"></i>Manage</h3>
+                    <h3 class="panel-title">Manage</h3>
                 </div>
                 <div class="panel-body">
                     <div class="list-group">
                         <%= link_to new_dashboard_project_path, class: 'list-group-item' do %>
                           New project
                         <% end %>
-                        <%= link_to destroy_user_session_path, :method => :delete, class: 'list-group-item' do %>
+                        <%= link_to destroy_user_session_path, method: :delete, class: 'list-group-item' do %>
                           Logout
                         <% end %>
                     </div>
@@ -18,13 +18,25 @@
             </div>
         </div>
         <div class="col-lg-8 col-md-8 cold-xs-8">
-            <div class="row">
+            <div class="row projects-display">
                 
                 <% @projects.each do |t| %>
-                    <div class="col-md-4 cold-xs-4">
-                        <%= image_tag t.screenshots if t.screenshots.present? %>
+                    <div class="col-md-4 cold-xs-4 project">
+                        <h2><%= t.name %></h2>
+                        <h3><%= t.created_at.to_date %></h3>
+                        <hr></hr>
+                        <%= image_tag t.screenshots.resized if t.screenshots.resized.present? %>
+                        <div class="project-links-container">
+                             <%= link_to edit_dashboard_project_path(t.id) do %>
+                              <span class="glyphicon glyphicon-pencil"></span>
+                            <% end %>
+                            <%= link_to dashboard_project_path(t.id), method: :delete, data: {confirm: "Are you sure ?"} do %>
+                              <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                            <% end %>
+                        </div>
                     </div>
                 <% end %>
+                
             </div>
         </div>
     </div>

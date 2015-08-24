@@ -372,6 +372,43 @@ p {
     }
 }
 
+.projects-display{
+  .project{
+    background-color: #fff;
+    color:#CCCCCC;
+    border:1px solid #DDD;
+    border-radius:6px;
+    text-align:center;
+    h2{
+      font-size:1.3em;
+      margin-top:10px;
+      margin-bottom:5px;
+      color:#969696;
+    }
+    h3{
+      color:#969696;
+      margin:0 0 3px 0;
+      font-size:0.8em;
+    }
+    img{
+      margin-bottom:10px;
+    }
+    hr{
+      margin:10px 0;
+      border-color:#EEE!important;
+    }
+    .project-links-container{
+      a{
+        float:left;
+        margin-right:10px;
+        &:last-child{
+          margin-right:0;
+        }
+      }
+    }
+  }
+}
+
 /*******************************************/
 /****************** FOOTER *****************/
 /*******************************************/
