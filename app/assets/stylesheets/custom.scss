@@ -115,6 +115,16 @@ form{
   }
 }
 
+.error-message{
+  text-align:left;
+  color:#D4A940;
+  margin-bottom:10px;
+  margin-left:60px;
+  .glyphicon{
+    margin-right:3px;
+  }
+}
+
 .container-small-white{
   text-align:center;
   width:700px;

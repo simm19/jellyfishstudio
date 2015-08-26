@@ -53,7 +53,7 @@ class Dashboard::ProjectController < Dashboard::DashboardController
   def format_technos(project)
     arr = []
     project.technos.split(' ').each do|c|
-      arr << c
+      arr << c.capitalize
     end
   end
   

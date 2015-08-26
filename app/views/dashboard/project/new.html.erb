@@ -1,6 +1,9 @@
 <div class="container">
     <div class="container-small-white">
         <h1>Créer un nouveau projet</h1>
+        <% @project.errors.each do | attr, msg | %>
+            <div class="error-message"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span><span><%= msg %></span></div>
+        <% end %>
         <%= form_for @project, url: dashboard_project_index_path, html: { method: :post, multipart: true } do |f| %>
             <div class="field">
                 <%= f.text_field :name, required: true, placeholder: "Nom du projet" %>
