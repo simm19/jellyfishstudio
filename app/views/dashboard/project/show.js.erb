@@ -1,10 +1,10 @@
-$('.project-details').find('h3').html('<%= @project.name %>');
+$('.project-details').find('h3').html('<%= @project.name.capitalize %>');
 $('.project-details').find('p').html('<%= @project.description %>');
 var js_array = [<%= raw @project_technos.to_json %>];
 var ul = $('.project-details').find('ul');
-jQuery.each(js_array, function(index, item) {
-    ul.append('<li>'+ item +'</li>');
-});
-console.log(js_array);
+ul.empty();
+$.each(js_array[0], function(index, value){ ul.append('<li>'+ value +'</li>'); });
+$('.project-details-images').empty();
+$('.project-details-images').append('<img src="<%= @project.screenshots %>", width="740px" />');
 
 $('.project-display').fadeIn('slow');

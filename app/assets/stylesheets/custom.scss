@@ -373,7 +373,11 @@ p {
 }
 
 .projects-display{
+  .col-md-4{
+    margin-bottom:20px;
+  }
   .project{
+    padding:5px;
     background-color: #fff;
     color:#CCCCCC;
     border:1px solid #DDD;
@@ -411,6 +415,20 @@ p {
 
 .project-display{
   display:none;
+  h3{
+    color:#4EAEA0;
+    font-size:2em;
+  }
+  h4{
+    font-size:1em;
+    margin-bottom:5px;
+  }
+  ul{
+    padding-left:20px;
+    li{
+      list-style-type: circle;
+    }
+  }
 }
 
 

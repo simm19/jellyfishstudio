@@ -21,21 +21,24 @@
             <div class="row projects-display">
                 
                 <% @projects.each do |t| %>
-                    <div class="col-md-4 cold-xs-4 project">
-                        <h2><%= t.name %></h2>
-                        <h3><%= t.created_at.to_date %></h3>
-                        <hr></hr>
-                        <%= image_tag t.screenshots.resized if t.screenshots.resized.present? %>
-                        <div class="project-links-container">
-                            <%= link_to dashboard_project_path(t.id), remote: true do %>
-                              <span class="glyphicon glyphicon-search"></span>
-                            <% end %>
-                            <%= link_to edit_dashboard_project_path(t.id) do %>
-                              <span class="glyphicon glyphicon-pencil"></span>
-                            <% end %>
-                            <%= link_to dashboard_project_path(t.id), method: :delete, data: {confirm: "Are you sure ?"} do %>
-                              <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-                            <% end %>
+                    <div class="col-md-4 col-xs-4">
+                        <div class="project">
+                            <h2><%= t.name %></h2>
+                            <h3><%= t.created_at.to_date %></h3>
+                            <hr></hr>
+                            <%= image_tag t.screenshots.resized if t.screenshots.resized.present? %>
+                            <div class="project-links-container">
+                                <%= link_to dashboard_project_path(t.id), remote: true do %>
+                                  <span class="glyphicon glyphicon-search"></span>
+                                <% end %>
+                                <%= link_to edit_dashboard_project_path(t.id) do %>
+                                  <span class="glyphicon glyphicon-pencil"></span>
+                                <% end %>
+                                <%= link_to dashboard_project_path(t.id), method: :delete, data: {confirm: "Are you sure ?"} do %>
+                                  <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                                <% end %>
+                                <div class="clearfix"></div>
+                            </div>
                         </div>
                     </div>
                 <% end %>
@@ -46,16 +49,12 @@
     <hr></hr>
 
     <div class="row project-display">
-        <div class="col-lg-8 col-md-8 cold-xs-8">
-            
-        </div>
+        <div class="col-lg-8 col-md-8 cold-xs-8 project-details-images"></div>
         <div class="col-lg-4 col-md-4 cold-xs-4 project-details">
             <h3></h3>
             <p></p>
-            <h4>Technologies</h4>
-            <ul>
-                
-            </ul>
+            <h4>Technologies :</h4>
+            <ul></ul>
         </div>
     </div>
 
