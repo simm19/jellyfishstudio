@@ -1,15 +1,23 @@
 <div class="container">
-    <h1>Créer un nouveau projet</h1>
-    <%= form_for @project, url: dashboard_project_index_path, html: { method: :post, multipart: true } do |f| %>
-        <%= f.text_field :name, required: true,  placeholder: "Nom du projet" %>
-        <%= f.text_field :technos, required: true,  placeholder: "Technologies du projet" %>
-        <%= f.number_field :project_duration %>
-        <%= f.text_area :description, required: true,  placeholder: "Description du projet" %>
-        <%= f.fields_for :screenshots do |p| %>
+    <div class="container-small-white">
+        <h1>Créer un nouveau projet</h1>
+        <%= form_for @project, url: dashboard_project_index_path, html: { method: :post, multipart: true } do |f| %>
             <div class="field">
-              <%= f.file_field :screenshots %>
+                <%= f.text_field :name, required: true, placeholder: "Nom du projet" %>
             </div>
+            <div class="field">
+                <%= f.text_field :technos, required: true, placeholder: "Technologies du projet" %>
+            </div>
+            <div class="field">
+                <%= f.number_field :project_duration, placeholder: "Temps de réalisation du projet (semaines)" %>
+            </div>
+            <div class="field">
+                <%= f.text_area :description, required: true, placeholder: "Description du projet" %>
+            </div>
+            <div class="field">
+                <%= f.file_field :screenshots, class: 'file-field' %>
+            </div>
+            <%= f.submit 'Créer le projet', class: 'btn btn-default btn-big btn-green' %>
         <% end %>
-        <%= f.submit %>
-    <% end %>
+    </div>
 </div>

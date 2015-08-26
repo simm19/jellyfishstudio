@@ -1,4 +1,5 @@
 class Dashboard::ProjectController < Dashboard::DashboardController
+  before_action :authenticate_user!
   
   def index
     @projects = Project.all
